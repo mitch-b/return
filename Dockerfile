@@ -56,7 +56,7 @@ FROM build-env AS publish
 
 # ... run publish
 COPY . .
-RUN ./build.sh --target=Publish-Ubuntu-18.04-x64 --publish-dir=publish --verbosity=verbose --skip-compression=true
+RUN ./build.sh --target=Publish-Ubuntu-20.04-x64 --publish-dir=publish --verbosity=verbose --skip-compression=true
 
 ### RUNTIME IMAGE
 FROM mcr.microsoft.com/dotnet/core/runtime-deps:3.1
@@ -67,7 +67,7 @@ COPY utils/install-app-prereqs.sh utils/
 RUN bash utils/install-app-prereqs.sh
 
 # ... Copy published app
-COPY --from=publish /source/publish/ubuntu.18.04-x64/ .
+COPY --from=publish /source/publish/ubuntu.20.04-x64/ .
 
 ENV ASPNETCORE_ENVIRONMENT Production
 
