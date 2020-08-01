@@ -15,8 +15,8 @@ ensure_success
 
 echo "Downloading Chromium debian package..."
 # latest stable: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-# version 80: https://www.slimjet.com/chrome/download-chrome.php?file=files%2F80.0.3987.149%2Fgoogle-chrome-stable_current_amd64.deb
-curl -L -o google-chrome.deb https://www.slimjet.com/chrome/download-chrome.php?file=files%2F80.0.3987.149%2Fgoogle-chrome-stable_current_amd64.deb
+# version 80: https://github.com/webnicer/chrome-downloads/raw/master/x64.deb/google-chrome-stable_80.0.3987.163-1_amd64.deb
+curl -L -o google-chrome.deb https://github.com/webnicer/chrome-downloads/raw/master/x64.deb/google-chrome-stable_80.0.3987.163-1_amd64.deb
 ensure_success
 
 echo "Installing Chromium debian package..."
